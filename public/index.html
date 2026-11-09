@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Arafat - Class 10 Student & Tech Enthusiast</title>
+  <meta name="description" content="Personal portfolio website for Ali Arafat, a Class 10 student, tech enthusiast, and lifelong learner.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200">
+
+  <!-- TOP BAR / HEADER -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+      <!-- Zone 1: Wordmark with bespoke Logo -->
+      <a href="#hero" class="flex items-center gap-2.5 text-lg font-bold tracking-tight text-slate-900 dark:text-white whitespace-nowrap shrink-0 group transition-colors">
+        <div class="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-indigo-700 text-white shadow-md shadow-indigo-500/20 ring-1 ring-white/20 group-hover:shadow-indigo-500/35 group-hover:scale-105 transition-all duration-200 shrink-0" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[22px] h-[22px]">
+            <defs>
+              <linearGradient id="aaGradHeader" x1="6" y1="6" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFFFFF" />
+                <stop offset="1" stop-color="#E0E7FF" />
+              </linearGradient>
+              <linearGradient id="innerAGradHeader" x1="12" y1="12" x2="24" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A5B4FC" />
+                <stop offset="1" stop-color="#C7D2FE" />
+              </linearGradient>
+            </defs>
+            <path d="M18 5.5L7.5 28.5H12L14.2 23H21.8L24 28.5H28.5L18 5.5ZM15.4 19.8L18 13.2L20.6 19.8H15.4Z" fill="url(#aaGradHeader)" />
+            <path d="M18 15.5L13.8 24.5H16.2L18 20.2L19.8 24.5H22.2L18 15.5Z" fill="url(#innerAGradHeader)" />
+            <circle cx="18" cy="5.5" r="1.5" fill="#38BDF8" />
+          </svg>
+        </div>
+        <span class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+          Ali Arafat
+        </span>
+        <span class="ml-1 px-1.5 py-0.5 text-[10px] font-semibold tracking-wider rounded-md bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/60">
+          v 1.0
+        </span>
+      </a>
+
+      <!-- Zone 2: Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-slate-900 dark:hover:text-white transition-colors whitespace-nowrap shrink-0">About</a>
+        <a href="#blog" class="hover:text-slate-900 dark:hover:text-white transition-colors whitespace-nowrap shrink-0">Blog</a>
+        <a href="#academics" class="hover:text-slate-900 dark:hover:text-white transition-colors whitespace-nowrap shrink-0">Academics</a>
+        <a href="#lifestyle" class="hover:text-slate-900 dark:hover:text-white transition-colors whitespace-nowrap shrink-0">Lifestyle</a>
+        <a href="#aspirations" class="hover:text-slate-900 dark:hover:text-white transition-colors whitespace-nowrap shrink-0">Aspirations</a>
+        <a href="#contact" class="hover:text-slate-900 dark:hover:text-white transition-colors whitespace-nowrap shrink-0">Contact</a>
+      </nav>
+
+      <!-- Zone 3: Language Toggle, Theme Toggle & Primary Action -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <!-- Language Switcher Button -->
+        <button id="lang-toggle-btn" aria-label="Switch language / ভাষা পরিবর্তন" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-300 dark:hover:border-indigo-600 transition-all cursor-pointer shadow-xs whitespace-nowrap">
+          <svg class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+          <span id="lang-btn-label">বাংলা</span>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors cursor-pointer">
+          <svg id="theme-icon-sun" class="w-4 h-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="theme-icon-moon" class="w-4 h-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <a id="nav-cta-btn" href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 dark:bg-indigo-600 dark:hover:bg-indigo-500 rounded-lg transition-colors whitespace-nowrap shrink-0 shadow-sm">
+          Get in Touch
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Toggle navigation" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pt-3 pb-5 space-y-1">
+      <div class="pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Language / ভাষা</span>
+        <button id="mobile-lang-toggle-btn" class="flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60">
+          <span id="mobile-lang-label">বাংলা সংস্করণ</span>
+        </button>
+      </div>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+      <a href="#blog" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Blog</a>
+      <a href="#academics" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Academics</a>
+      <a href="#lifestyle" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Lifestyle</a>
+      <a href="#aspirations" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Aspirations</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
+    
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="pt-4 md:pt-10 scroll-mt-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left: Typographic Hierarchy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="space-y-3">
+            <p class="text-xs font-semibold tracking-wider uppercase text-indigo-600 dark:text-indigo-400">
+              Student Portfolio · Secondary Education
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+              Hi, I'm <span class="text-indigo-600 dark:text-indigo-400">Ali Arafat</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-medium text-slate-600 dark:text-slate-300">
+              Class 10 Student, Tech Enthusiast, &amp; Lifelong Learner
+            </p>
+          </div>
+
+          <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Currently preparing for secondary board exams while immersing myself in Python scripting,
+            hands-on Arduino robotics, and scientific inquiry. I love transforming textbook curiosity
+            into functional code, clean circuits, and thoughtful writing.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#academics" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors shadow-sm">
+              Explore Academics
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-slate-800 hover:text-slate-900 bg-white hover:bg-slate-100 border border-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:border-slate-800 dark:hover:bg-slate-800 rounded-lg transition-colors">
+              Contact Me
+            </a>
+          </div>
+
+          <!-- Cohort details -->
+          <div class="pt-2 text-xs text-slate-500 dark:text-slate-400 flex flex-wrap items-center gap-2">
+            <span>St. Xavier’s Model Secondary</span>
+            <span aria-hidden="true">·</span>
+            <span>Class 10 (Science Stream Track)</span>
+            <span aria-hidden="true">·</span>
+            <span>Batch 2026</span>
+          </div>
+        </div>
+
+        <!-- Right: Visual Container -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-[300px] sm:max-w-[340px] aspect-[4/4.6] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl bg-slate-100 dark:bg-slate-900 group">
+            <img src="/assets/aistudio/IMG_20261024_153144_b681d027.png" alt="Ali Arafat - Class 10 Student" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end p-4">
+              <div class="text-white">
+                <p class="text-sm font-semibold">Ali Arafat</p>
+                <p class="text-xs text-slate-300">Curious Mind · Builder · Class 10 Scholar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Strip -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="space-y-1 text-center md:text-left">
+          <p class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-medium">Academic Standing</p>
+          <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">Top 5%</p>
+          <p class="text-xs text-slate-500">Consistent grade honors</p>
+        </div>
+        <div class="space-y-1 text-center md:text-left">
+          <p class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-medium">STEM Builds</p>
+          <p class="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400 tabular-nums">12+</p>
+          <p class="text-xs text-slate-500">Hardware &amp; web projects</p>
+        </div>
+        <div class="space-y-1 text-center md:text-left">
+          <p class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-medium">Science Honors</p>
+          <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">3 Awards</p>
+          <p class="text-xs text-slate-500">Olympiad &amp; science fairs</p>
+        </div>
+        <div class="space-y-1 text-center md:text-left">
+          <p class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-medium">Books Read</p>
+          <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">40+ Books</p>
+          <p class="text-xs text-slate-500">Science &amp; history literature</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="scroll-mt-24 space-y-10">
+      <div class="max-w-3xl">
+        <p class="text-xs font-semibold tracking-wider uppercase text-indigo-600 dark:text-indigo-400 mb-2">
+          Background &amp; Philosophy
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Balancing Rigor, Curiosity, and Everyday Life
+        </h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
+          As a Class 10 student, my days are a dynamic blend of balancing quadratic equations, physics formulas,
+          and preparing for milestone board examinations. But beyond the textbooks, what truly energizes me is
+          understanding how things work under the hood—whether that means tearing down an algorithmic logic flow,
+          soldering a sensor module, or discussing historical turning points.
+        </p>
+        <p class="mt-3 text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+          I believe that being a well-rounded student means pairing discipline with playful exploration. When I am not
+          at my study desk or in the physics lab, you can find me playing goalkeeper on the football field or reading
+          fascinating chapters on cosmology.
+        </p>
+      </div>
+
+      <!-- Strengths Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+            💡
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Problem Solving</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Approaching mathematical puzzles and debugging errors systematically with patience, breaking complex
+            multi-step challenges into manageable first principles.
+          </p>
+          <div class="text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2">
+            <span>Algebra</span><span aria-hidden="true">·</span><span>Debugging</span><span aria-hidden="true">·</span><span>Logic</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+            ✨
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Creative Thinking</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Combining technical curiosity with expressive communication—from drafting clean user interfaces to writing
+            thought-provoking essays on emerging technology.
+          </p>
+          <div class="text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2">
+            <span>UI Prototyping</span><span aria-hidden="true">·</span><span>Science Writing</span><span aria-hidden="true">·</span><span>Maker Projects</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+            🤝
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Collaboration &amp; Leadership</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Active member of the School Science Club and sports squads. Experienced in coordinating group assignments,
+            mentoring junior students, and active listening.
+          </p>
+          <div class="text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2">
+            <span>Science Club</span><span aria-hidden="true">·</span><span>Team Sports</span><span aria-hidden="true">·</span><span>Peer Tutoring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG & PHOTO JOURNAL SECTION (Right after About) -->
+    <section id="blog" class="scroll-mt-24 space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <p class="text-xs font-semibold tracking-wider uppercase text-indigo-600 dark:text-indigo-400 mb-2">
+            Photo Journal &amp; Student Stories
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Life in Pictures &amp; Student Blog
+          </h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-400 text-base max-w-2xl">
+            Snapshots from campus mornings, robotics experiments, study routines, and personal reflections.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Post 1 -->
+        <article class="group flex flex-col justify-between rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-700/60 transition-all overflow-hidden">
+          <div class="space-y-3">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="/images/blog_campus.jpg" alt="Morning School Corridors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="px-5 pt-1 space-y-2">
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400">
+                <span class="font-semibold text-indigo-600 dark:text-indigo-400">Campus Life</span>
+                <span aria-hidden="true">·</span>
+                <span>October 28, 2025</span>
+                <span aria-hidden="true">·</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug line-clamp-2">
+                Morning Walk Through Our Historic School Corridors
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                Walking through the red brick archways under the morning mahogany shade reminds me how precious these final school years are before board exams.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-4 pt-3 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/80 mt-3">
+            <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1 group-hover:gap-1.5 transition-all">
+              Read Story ↗
+            </span>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="group flex flex-col justify-between rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-700/60 transition-all overflow-hidden">
+          <div class="space-y-3">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="/images/blog_robotics.jpg" alt="Robotics Lab Workshop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="px-5 pt-1 space-y-2">
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400">
+                <span class="font-semibold text-indigo-600 dark:text-indigo-400">STEM &amp; Robotics</span>
+                <span aria-hidden="true">·</span>
+                <span>September 14, 2025</span>
+                <span aria-hidden="true">·</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug line-clamp-2">
+                Hands-on with Arduino: Bringing Our Science Club Bench to Life
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                Three evenings of methodical circuit wiring taught me that patience is as critical in engineering as clean code.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-4 pt-3 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/80 mt-3">
+            <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1 group-hover:gap-1.5 transition-all">
+              Read Story ↗
+            </span>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="group flex flex-col justify-between rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-700/60 transition-all overflow-hidden">
+          <div class="space-y-3">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="/images/lifestyle_books_study_1793686325956.jpg" alt="Study Desk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="px-5 pt-1 space-y-2">
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400">
+                <span class="font-semibold text-indigo-600 dark:text-indigo-400">Study Habits</span>
+                <span aria-hidden="true">·</span>
+                <span>August 22, 2025</span>
+                <span aria-hidden="true">·</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug line-clamp-2">
+                Crafting a Calm Study Routine for Class 10 Pre-Boards
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                Why 45-minute focused study sprints beat 4-hour continuous cramming when mastering Higher Math and Physics.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-4 pt-3 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/80 mt-3">
+            <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1 group-hover:gap-1.5 transition-all">
+              Read Story ↗
+            </span>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="group flex flex-col justify-between rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-700/60 transition-all overflow-hidden">
+          <div class="space-y-3">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="/images/project_science_stem_1793686326788.jpg" alt="Greenhouse Automation Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="px-5 pt-1 space-y-2">
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400">
+                <span class="font-semibold text-indigo-600 dark:text-indigo-400">STEM &amp; Robotics</span>
+                <span aria-hidden="true">·</span>
+                <span>July 18, 2025</span>
+                <span aria-hidden="true">·</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug line-clamp-2">
+                Automated Greenhouse: Lessons from Our Regional Science Fair
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                Building a sensor-driven irrigation prototype and presenting it to visiting judges taught me the power of applied science.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-4 pt-3 flex items-center justify-between border-t border-slate-100 dark:border-slate-800/80 mt-3">
+            <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1 group-hover:gap-1.5 transition-all">
+              Read Story ↗
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. ACADEMICS & ACHIEVEMENTS SECTION -->
+    <section id="academics" class="scroll-mt-24 space-y-12">
+      <div>
+        <p class="text-xs font-semibold tracking-wider uppercase text-indigo-600 dark:text-indigo-400 mb-2">
+          Education &amp; Milestones
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Academic Journey &amp; Distinctions
+        </h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400 text-base max-w-2xl">
+          Highlights of school progress, favorite fields of inquiry, and recognition in regional competitions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Timeline -->
+        <div class="lg:col-span-7 space-y-6">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+            School Progress Timeline
+          </h3>
+
+          <div class="relative pl-6 space-y-8 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200 dark:before:bg-slate-800">
+            <!-- Class 10 -->
+            <div class="relative">
+              <div class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-600 border-2 border-white dark:border-slate-950 shadow-sm"></div>
+              <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h4 class="text-base font-bold text-slate-900 dark:text-white">Class 10 (Secondary Board Preparation)</h4>
+                  <span class="text-xs text-slate-500 font-medium tabular-nums">2025 – Present</span>
+                </div>
+                <p class="mt-1 text-xs text-indigo-600 dark:text-indigo-400 font-medium">St. Xavier’s Model Secondary School</p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">
+                  Currently specializing in Advanced Science &amp; Mathematics track. Leading the school STEM delegation and maintaining a 94%+ mock examination score average.
+                </p>
+              </div>
+            </div>
+
+            <!-- Class 9 -->
+            <div class="relative">
+              <div class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 dark:bg-slate-600 border-2 border-white dark:border-slate-950 shadow-sm"></div>
+              <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h4 class="text-base font-bold text-slate-900 dark:text-white">Class 9 (Junior High Milestone)</h4>
+                  <span class="text-xs text-slate-500 font-medium tabular-nums">2024 – 2025</span>
+                </div>
+                <p class="mt-1 text-xs text-indigo-600 dark:text-indigo-400 font-medium">Academic Excellence Honor Roll</p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">
+                  Achieved Distinction in Science and Information Technology. Represented school in the Inter-School Science Exhibition with an automated micro-greenhouse model.
+                </p>
+              </div>
+            </div>
+
+            <!-- Class 8 -->
+            <div class="relative">
+              <div class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-300 dark:bg-slate-700 border-2 border-white dark:border-slate-950 shadow-sm"></div>
+              <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h4 class="text-base font-bold text-slate-900 dark:text-white">Class 8 (Foundational Honors)</h4>
+                  <span class="text-xs text-slate-500 font-medium tabular-nums">2023 – 2024</span>
+                </div>
+                <p class="mt-1 text-xs text-indigo-600 dark:text-indigo-400 font-medium">Best All-Rounder Student Nominee</p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">
+                  Discovered enthusiasm for coding through basic Python; selected for the school junior robotics club.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subjects & Awards -->
+        <div class="lg:col-span-5 space-y-6">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Favorite Subjects</h3>
+          
+          <div class="space-y-4">
+            <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-bold text-slate-900 dark:text-white">Physical &amp; Chemical Sciences</span>
+                <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tabular-nums">96% Avg</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">Laws of motion, optics, electromagnetism, and chemical bonding reactions.</p>
+              <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                <div class="bg-indigo-600 h-full rounded-full" style="width: 96%"></div>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-bold text-slate-900 dark:text-white">Computer Science &amp; IT</span>
+                <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tabular-nums">98% Avg</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">Algorithms, conditional loops, web architectures, and basic cybersecurity.</p>
+              <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                <div class="bg-indigo-600 h-full rounded-full" style="width: 98%"></div>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-bold text-slate-900 dark:text-white">Mathematics</span>
+                <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tabular-nums">93% Avg</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">Trigonometric identities, polynomials, coordinate geometry, and probability.</p>
+              <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                <div class="bg-indigo-600 h-full rounded-full" style="width: 93%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 space-y-3">
+            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Key Awards &amp; Honors</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                <p class="font-bold text-slate-900 dark:text-white">🥈 Silver Medalist</p>
+                <p class="text-slate-500 dark:text-slate-400">Inter-School Science Olympiad 2025</p>
+              </div>
+              <div class="p-3.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                <p class="font-bold text-slate-900 dark:text-white">🥉 2nd Runner Up</p>
+                <p class="text-slate-500 dark:text-slate-400">Regional Junior Hackathon 2025</p>
+              </div>
+              <div class="p-3.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                <p class="font-bold text-slate-900 dark:text-white">🎤 Best Speaker</p>
+                <p class="text-slate-500 dark:text-slate-400">Annual Inter-House Debate 2024</p>
+              </div>
+              <div class="p-3.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                <p class="font-bold text-slate-900 dark:text-white">🌟 High Distinction</p>
+                <p class="text-slate-500 dark:text-slate-400">Math Talent Search Examination</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. LIFESTYLE & PERSONAL INTERESTS (INTERACTIVE TABS) -->
+    <section id="lifestyle" class="scroll-mt-24 space-y-8">
+      <div>
+        <p class="text-xs font-semibold tracking-wider uppercase text-indigo-600 dark:text-indigo-400 mb-2">
+          Life Beyond The Desk
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Lifestyle &amp; Personal Interests
+        </h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400 text-base max-w-2xl">
+          An interactive view of daily study habits, athletic hobbies, media recommendations, and reflections.
+        </p>
+      </div>
+
+      <!-- Segmented Tab Controls -->
+      <div class="flex items-center gap-2 p-1.5 bg-slate-200/70 dark:bg-slate-900 rounded-xl overflow-x-auto max-w-2xl border border-slate-200 dark:border-slate-800">
+        <button onclick="switchTab('routine')" id="tab-btn-routine" class="tab-btn active px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm">
+          Daily Routine
+        </button>
+        <button onclick="switchTab('hobbies')" id="tab-btn-hobbies" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+          Hobbies &amp; Sports
+        </button>
+        <button onclick="switchTab('books')" id="tab-btn-books" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+          Books &amp; Media Shelf
+        </button>
+        <button onclick="switchTab('journal')" id="tab-btn-journal" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+          Student Journal
+        </button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div id="tab-content-container">
+        <!-- Routine Panel -->
+        <div id="tab-panel-routine" class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-4">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Time Management &amp; Study Habits</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">A structured rhythm balancing board exam preparation and creative curiosity.</p>
+            </div>
+            <span class="text-xs font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-3 py-1 rounded-full w-fit">Pomodoro 50/10 Cadence</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tabular-nums">06:00 – 07:30 AM</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Early Morning Prime</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Revision of theoretical physics formulas and biology diagrams when retention is highest.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tabular-nums">08:00 AM – 03:00 PM</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">School &amp; Lab Sessions</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Active classroom participation, laboratory experiments, and group collaboration.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tabular-nums">04:30 – 06:00 PM</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Sports &amp; Reset</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Football drills or outdoor cycling to clear the mind and stay physically active.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tabular-nums">07:30 – 10:00 PM</span>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Deep Work &amp; Coding</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Solving advanced mathematics problems, followed by 45 minutes of hobby coding or reading.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hobbies Panel -->
+        <div id="tab-panel-hobbies" class="hidden p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+          <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Passions, Sports &amp; Creative Projects</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Activities that fuel imagination, resilience, and tactical teamwork.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="space-y-3">
+              <h4 class="text-base font-bold text-slate-900 dark:text-white">💻 Tinkering &amp; Coding</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Writing micro-scripts in Python, experimenting with sensor libraries on Arduino, and crafting interactive web pages with clean HTML, CSS, and JavaScript.
+              </p>
+            </div>
+            <div class="space-y-3">
+              <h4 class="text-base font-bold text-slate-900 dark:text-white">⚽ Football &amp; Athletics</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Playing competitive football as goalkeeper and defender for the school team. It has taught me split-second decision making, communication under pressure, and mental stamina.
+              </p>
+            </div>
+            <div class="space-y-3">
+              <h4 class="text-base font-bold text-slate-900 dark:text-white">✍️ Science Communication</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Translating intricate science concepts—like special relativity or neural networks—into relatable, illustrated notes and essays for school peers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Books Panel -->
+        <div id="tab-panel-books" class="hidden p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+          <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Recommended Reads &amp; Audio Shelf</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Works that expanded how I view science, habits, and computational history.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-3">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Books On My Desk</h4>
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <p class="text-sm font-bold text-slate-900 dark:text-white">A Brief History of Time</p>
+                <p class="text-xs text-slate-500">Stephen Hawking · Sparked my fascination with cosmological horizons.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <p class="text-sm font-bold text-slate-900 dark:text-white">Atomic Habits</p>
+                <p class="text-xs text-slate-500">James Clear · Shaped how I approach daily study intervals.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <p class="text-sm font-bold text-slate-900 dark:text-white">Ignited Minds</p>
+                <p class="text-xs text-slate-500">Dr. A.P.J. Abdul Kalam · Using science for societal empowerment.</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Podcasts &amp; Channels</h4>
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <p class="text-sm font-bold text-slate-900 dark:text-white">Veritasium &amp; 3Blue1Brown</p>
+                <p class="text-xs text-slate-500">Visual Math &amp; Physics · Masterclasses in conceptual clarity.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <p class="text-sm font-bold text-slate-900 dark:text-white">Lex Fridman Podcast</p>
+                <p class="text-xs text-slate-500">AI, Robotics &amp; Physics · In-depth interviews with computing pioneers.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <p class="text-sm font-bold text-slate-900 dark:text-white">Radiolab</p>
+                <p class="text-xs text-slate-500">WNYC Studios · Curious scientific storytelling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Journal Panel -->
+        <div id="tab-panel-journal" class="hidden p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+          <div class="border-b border-slate-100 dark:border-slate-800 pb-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Student Journal &amp; Learning Reflections</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Candid thoughts on learning curves, exam pressure, and building things from scratch.</p>
+          </div>
+          <div class="space-y-4">
+            <article class="p-5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <div class="flex items-center justify-between text-xs text-slate-500">
+                <span class="font-semibold text-indigo-600 dark:text-indigo-400">Reflection #12</span>
+                <span>October 2025</span>
+              </div>
+              <h4 class="text-base font-bold text-slate-900 dark:text-white">What building my first smart greenhouse taught me about patience</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                "In software, when an error occurs, you get a line number and stack trace. In hardware, when a circuit doesn't boot, you only get silence. It took me three evenings with a multimeter to realize my breadboard ground rail had a microscopic loose lead. That frustration taught me more about methodical debugging than ten textbook chapters ever could."
+              </p>
+            </article>
+            <article class="p-5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <div class="flex items-center justify-between text-xs text-slate-500">
+                <span class="font-semibold text-indigo-600 dark:text-indigo-400">Reflection #08</span>
+                <span>August 2025</span>
+              </div>
+              <h4 class="text-base font-bold text-slate-900 dark:text-white">Balancing Class 10 board prep without abandoning weekend coding</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                "A lot of older students told me I had to give up all extracurriculars and coding for Class 10. I found that completely shutting off my creative outlets actually made studying harder. Setting aside strictly 90 minutes every Saturday morning to write code or experiment with Python acts like a mental palate cleanser—it makes my Sunday math sessions twice as sharp."
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FUTURE ASPIRATIONS SECTION -->
+    <section id="aspirations" class="scroll-mt-24 space-y-8">
+      <div class="max-w-3xl">
+        <p class="text-xs font-semibold tracking-wider uppercase text-indigo-600 dark:text-indigo-400 mb-2">
+          Vision &amp; Ambitions
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Future Aspirations &amp; Road Ahead
+        </h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
+          Looking beyond Class 10, my aspiration is to study Computer Science and Electrical Engineering at a premier
+          institution, combining high-speed algorithmic thinking with physical hardware solutions to tackle real-world
+          challenges like clean energy and educational equity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">01. Next 2 Years (High School)</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Senior Secondary Excellence</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Opt for Physics, Chemistry, and Mathematics (PCM) with Computer Science. Compete in the National Science Olympiad and release my first open-source student helper package.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">02. University Horizon</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Computer Science &amp; Systems</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Pursue an undergraduate degree in Computer Engineering. Explore embedded operating systems, artificial intelligence, and distributed computing architectures.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">03. Long-Term Mission</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Tech for Tangible Impact</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Build sustainable, open technology systems—like intelligent environmental probes or accessible offline educational toolkits—that deliver measurable help to communities.
+          </p>
+        </div>
+      </div>
+
+      <blockquote class="p-6 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/60 text-indigo-900 dark:text-indigo-200 text-sm sm:text-base italic leading-relaxed">
+        "Technology is at its best when it solves real everyday problems for ordinary people—not just when it looks impressive on a screen."
+        <span class="block not-italic text-xs font-semibold text-indigo-700 dark:text-indigo-300 mt-2">
+          — Ali Arafat, Personal Motto
+        </span>
+      </blockquote>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" class="scroll-mt-24 space-y-8">
+      <div>
+        <p class="text-xs font-semibold tracking-wider uppercase text-indigo-600 dark:text-indigo-400 mb-2">
+          Say Hello
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Get in Touch
+        </h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-400 text-base max-w-2xl">
+          Whether you want to discuss a student science project, share a book recommendation, or collaborate on
+          a coding experiment, I’d love to hear from you!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Contact Form -->
+        <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <form id="contact-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label for="form-name" class="text-xs font-semibold text-slate-700 dark:text-slate-300">Your Name *</label>
+                <input id="form-name" type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors">
+              </div>
+              <div class="space-y-1.5">
+                <label for="form-email" class="text-xs font-semibold text-slate-700 dark:text-slate-300">Your Email *</label>
+                <input id="form-email" type="email" required placeholder="e.g. sarah@example.com" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors">
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="form-subject" class="text-xs font-semibold text-slate-700 dark:text-slate-300">Subject / Topic</label>
+              <input id="form-subject" type="text" placeholder="e.g. Science Fair Collaboration" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors">
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="form-message" class="text-xs font-semibold text-slate-700 dark:text-slate-300">Message *</label>
+              <textarea id="form-message" required rows="4" placeholder="Write your note or question here..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors resize-none"></textarea>
+            </div>
+
+            <!-- Submission Feedback Alert Container -->
+            <div id="form-alert" class="hidden p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 flex items-start gap-3">
+              <svg class="w-5 h-5 shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <p class="text-sm font-bold">Message Delivered to Inbox!</p>
+                <p class="text-xs mt-0.5 text-emerald-700 dark:text-emerald-300">Thank you for reaching out! Your message was sent directly to aliarafat57000@gmail.com. Ali will get back to your note soon after school hours.</p>
+              </div>
+            </div>
+
+            <button type="submit" id="submit-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 dark:bg-indigo-600 dark:hover:bg-indigo-500 rounded-lg transition-colors shadow-sm cursor-pointer">
+              <span>Send Message</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Direct Info & Social -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Direct Communication</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              Feel free to copy Ali’s student contact email or connect via safe educational profiles.
+            </p>
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-between gap-3">
+              <a href="mailto:aliarafat57000@gmail.com" class="text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 truncate">aliarafat57000@gmail.com</a>
+              <button onclick="copyEmail()" id="copy-btn" class="px-2.5 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:underline">
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Social Profiles &amp; Direct Chat</h3>
+            <a href="https://www.facebook.com/aliarafat.5203" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-blue-50/50 dark:hover:bg-blue-950/20 transition-colors text-xs font-semibold text-slate-700 dark:text-slate-200">
+              <span class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold">f</span>
+                <span>Facebook (aliarafat.5203)</span>
+              </span>
+              <span>↗</span>
+            </a>
+            <a href="https://wa.me/8801804734908" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-emerald-50/50 dark:hover:bg-emerald-950/20 transition-colors text-xs font-semibold text-slate-700 dark:text-slate-200">
+              <span class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xs">💬</span>
+                <span>WhatsApp (01804734908)</span>
+              </span>
+              <span>↗</span>
+            </a>
+            <a href="#lifestyle" onclick="switchTab('journal')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors text-xs font-semibold text-slate-700 dark:text-slate-200">
+              <span>Student Journal &amp; Notes</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-colors py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex flex-wrap items-center gap-2.5">
+        <div class="flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-600 text-white shrink-0" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5">
+            <path d="M18 5.5L7.5 28.5H12L14.2 23H21.8L24 28.5H28.5L18 5.5ZM15.4 19.8L18 13.2L20.6 19.8H15.4Z" fill="white" />
+            <circle cx="18" cy="5.5" r="1.5" fill="#38BDF8" />
+          </svg>
+        </div>
+        <p>© 2026 Ali Arafat. Crafted with care for curiosity, science, and learning.</p>
+        <span class="px-2 py-0.5 text-[11px] font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+          v 1.0
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">v 1.0</span>
+        <a href="#hero" class="hover:text-slate-900 dark:hover:text-white transition-colors">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+
+    // Dark Mode Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    function applyTheme() {
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+    applyTheme();
+
+    themeToggleBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Tabs Switcher
+    function switchTab(tabId) {
+      const tabs = ['routine', 'hobbies', 'books', 'journal'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-btn-' + t);
+        const panel = document.getElementById('tab-panel-' + t);
+        if (t === tabId) {
+          btn.className = 'tab-btn active px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm';
+          panel.classList.remove('hidden');
+        } else {
+          btn.className = 'tab-btn px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+          panel.classList.add('hidden');
+        }
+      });
+    }
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const formAlert = document.getElementById('form-alert');
+    const submitBtn = document.getElementById('submit-btn');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Sending to Inbox...</span>';
+
+      const payload = {
+        name: document.getElementById('form-name').value.trim(),
+        email: document.getElementById('form-email').value.trim(),
+        subject: document.getElementById('form-subject').value.trim(),
+        message: document.getElementById('form-message').value.trim(),
+        _subject: '[Portfolio Message] New message from ' + document.getElementById('form-name').value.trim(),
+        _replyto: document.getElementById('form-email').value.trim(),
+        _captcha: 'false'
+      };
+
+      try {
+        await fetch('https://formsubmit.co/ajax/aliarafat57000@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) {
+        console.error('Submission error:', err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        formAlert.classList.remove('hidden');
+        contactForm.reset();
+        setTimeout(() => {
+          formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    });
+
+    // Copy Email Helper
+    function copyEmail() {
+      navigator.clipboard.writeText('aliarafat57000@gmail.com');
+      const copyBtn = document.getElementById('copy-btn');
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => { copyBtn.textContent = 'Copy'; }, 2000);
+    }
+  </script>
+</body>
+</html>
